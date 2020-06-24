@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gec.user.dao.UserDao">
+    <select id="queryuserList" resultMap="">
+        select * from tb_user
+    </select>
+    <resultMap id="resultUserMapp" type="com.gec.user.pojo.User">
+        <id property="id" column="id"/>
+        <result property="username" column="user_name"/>
+        <result property="age" column="age"/>
+    </resultMap>
+
+</mapper>
